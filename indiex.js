@@ -1,5 +1,5 @@
 let captchachecked = false;
-function beforeSubmit()
+function beforeSubmit(event)
 {
     if(captchachecked){
         let inputdate = document.querySelector(".inputdate");
@@ -12,6 +12,7 @@ function beforeSubmit()
     }
     else{
         alert("Please select the recaptcha box to submit the lead")
+        event.preventDefault()
     }
 }
 
